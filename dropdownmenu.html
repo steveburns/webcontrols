@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>selector</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <style>
+        
+            .placeholder { color: #aaa; }
+
+            .lookup a.dropdown-toggle { 
+                width: 22px; 
+                padding: 4px 0px; 
+                -webkit-border-radius: 0 4px 4px 0;
+                -moz-border-radius: 0 4px 4px 0;
+                border-radius: 0 4px 4px 0;
+            }
+
+            .lookup i.icon-chevron-down { font-size: 11px; }
+
+            .lookup li.btn-group { padding: 0 0; margin: 0px 4px; }
+            .lookup li button { width: 26px; padding: 0 0; margin: 0 4px; }
+            .lookup li input { margin: 4px 4px; }
+            .lookup select { margin: 0px 4px; }
+
+            .lookup input.span12 { width: 903px; }
+            .lookup input.span11 { width: 823px; }
+            .lookup input.span10 { width: 743px; }
+            .lookup input.span9  { width: 663px; }
+            .lookup input.span8  { width: 583px; }
+            .lookup input.span7  { width: 503px; }
+            .lookup input.span6  { width: 423px; }
+            .lookup input.span5  { width: 343px; }
+            .lookup input.span4  { width: 263px; }
+            .lookup input.span3  { width: 183px; }
+            .lookup input.span2  { width: 103px; }
+            
+            .lookup select.span12 { width: 930px; }
+            .lookup select.span11 { width: 850px; }
+            .lookup select.span10 { width: 770px; }
+            .lookup select.span9  { width: 690px; }
+            .lookup select.span8  { width: 610px; }
+            .lookup select.span7  { width: 530px; }
+            .lookup select.span6  { width: 450px; }
+            .lookup select.span5  { width: 370px; }
+            .lookup select.span4  { width: 290px; }
+            .lookup select.span3  { width: 210px; }
+            .lookup select.span2  { width: 130px; }
+                          
+            .lookup li input.span12 { width: 916px; }
+            .lookup li input.span11 { width: 836px; }
+            .lookup li input.span10 { width: 756px; }
+            .lookup li input.span9  { width: 676px; }
+            .lookup li input.span8  { width: 596px; }
+            .lookup li input.span7  { width: 516px; }
+            .lookup li input.span6  { width: 436px; }
+            .lookup li input.span5  { width: 356px; }
+            .lookup li input.span4  { width: 276px; }
+            .lookup li input.span3  { width: 196px; }
+            .lookup li input.span2  { width: 116px; }
+
+            @media (max-width: 767px) 
+            {
+            }
+            
+            @media (min-width: 768px) and (max-width: 979px) 
+            {
+              .lookup input.span12 { width: 687px; }
+              .lookup input.span11 { width: 625px; }
+              .lookup input.span10 { width: 563px; }
+              .lookup input.span9  { width: 501px; }
+              .lookup input.span8  { width: 439px; }
+              .lookup input.span7  { width: 377px; }
+              .lookup input.span6  { width: 315px; }
+              .lookup input.span5  { width: 253px; }
+              .lookup input.span4  { width: 191px; }
+              .lookup input.span3  { width: 129px; }
+              .lookup input.span2  { width: 67px; }
+              
+              .lookup select.span12 { width: 714px; }
+              .lookup select.span11 { width: 652px; }
+              .lookup select.span10 { width: 590px; }
+              .lookup select.span9  { width: 528px; }
+              .lookup select.span8  { width: 466px; }
+              .lookup select.span7  { width: 404px; }
+              .lookup select.span6  { width: 342px; }
+              .lookup select.span5  { width: 280px; }
+              .lookup select.span4  { width: 218px; }
+              .lookup select.span3  { width: 156px; }
+              .lookup select.span2  { width: 94px; }
+              
+              .lookup li input.span12 { width: 700px; }
+              .lookup li input.span11 { width: 638px; }
+              .lookup li input.span10 { width: 576px; }
+              .lookup li input.span9  { width: 514px; }
+              .lookup li input.span8  { width: 452px; }
+              .lookup li input.span7  { width: 390px; }
+              .lookup li input.span6  { width: 328px; }
+              .lookup li input.span5  { width: 266px; }
+              .lookup li input.span4  { width: 203px; }
+              .lookup li input.span3  { width: 142px; }
+              .lookup li input.span2  { width: 80px; }
+            }
+
+            @media (min-width: 1200px) 
+            {
+              .lookup input.span12 { width: 1133px; }
+              .lookup input.span11 { width: 1033px; }
+              .lookup input.span10 { width: 933px; }
+              .lookup input.span9  { width: 833px; }
+              .lookup input.span8  { width: 733px; }
+              .lookup input.span7  { width: 633px; }
+              .lookup input.span6  { width: 533px; }
+              .lookup input.span5  { width: 433px; }
+              .lookup input.span4  { width: 333px; }
+              .lookup input.span3  { width: 233px; }
+              .lookup input.span2  { width: 133px; }
+              
+              .lookup select.span12 { width: 1160px; }
+              .lookup select.span11 { width: 1060px; }
+              .lookup select.span10 { width: 960px; }
+              .lookup select.span9  { width: 860px; }
+              .lookup select.span8  { width: 760px; }
+              .lookup select.span7  { width: 660px; }
+              .lookup select.span6  { width: 560px; }
+              .lookup select.span5  { width: 460px; }
+              .lookup select.span4  { width: 360px; }
+              .lookup select.span3  { width: 260px; }
+              .lookup select.span2  { width: 160px; }
+              
+              .lookup li input.span12 { width: 1146px; }
+              .lookup li input.span11 { width: 1046px; }
+              .lookup li input.span10 { width: 946px; }
+              .lookup li input.span9  { width: 846px; }
+              .lookup li input.span8  { width: 746px; }
+              .lookup li input.span7  { width: 646px; }
+              .lookup li input.span6  { width: 546px; }
+              .lookup li input.span5  { width: 446px; }
+              .lookup li input.span4  { width: 346px; }
+              .lookup li input.span3  { width: 246px; }
+              .lookup li input.span2  { width: 146px; }
+            }
+        
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <form class="well">
+
+                <!-- control start -->
+            
+                <div class="control-group">
+                    <label class="control-label">Cars</label>
+                    <div class="controls lookup">
+                        <div class="btn-group">
+                            <div class="input-append">
+                                <input type="hidden" id="contact_types_type" name="contact_types_type" value="persona_type">
+                                <input class="span3 lookup-input" type="text" id="contact_types" name="contact_types" value="">
+                                <a class="btn dropdown-toggle" id="contact_types_btn_menu" data-toggle="dropdown" href="#"><i class="icon-chevron-down"></i></a>
+                                <ul class="dropdown-menu" id="contact_types_menu">
+                                    <li class="dropdown">
+                                        <select id="contact_types_select" multiple="multiple" class="span3" size="6">
+                                            <option value="1">Audi</option>                     
+                                            <option value="2">Bmw</option>
+                                            <option value="3">Nissan</option>
+                                        </select>
+                                    </li>
+                                    <li><input class="span3" type="text" id="contact_types_new_item" value="" placeholder="New value"></li>
+                                    <li class="btn-group">
+                                        <button type="button" class="btn" id="contact_types_btn_ok"><i class="icon-ok"></i></button>
+                                        <button type="button" class="btn" id="contact_types_btn_add" disabled="true"><i class="icon-plus"></i></button>
+                                        <button type="button" class="btn" id="contact_types_btn_remove" disabled="true"><i class="icon-minus"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- control end -->
+
+                <div class="control-group">
+                    <label class="control-label">Fruits</label>
+                    <div class="controls">
+                        <select class="span3" id="test_field1" name="test_field1">
+                            <option value="1">Orange</option>
+                            <option value="2">Apple</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </form>
+
+        </div>
+
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+
+                /* lookup */
+                
+                var delimiter = ',';
+
+                function validLookup( i, e) {
+                    i = i.get(0);
+
+                    var v = i.value;
+                    var p = 0;
+                    var c = e.which == 188 ? ',' : 'x';
+
+                    if ('selectionStart' in i) {
+                        p = i.selectionStart;
+                    } else if (document.selection) { // IE
+                        i.focus();
+                        var s = document.selection.createRange();
+                        var sl = document.selection.createRange().text.length;
+                        s.moveStart( 'character', -i.value.length);
+                        p = s.text.length - sl;
+                    }
+
+                    return (v.substr(0,p) + c + v.substr(p)).match(/,(\s+)?,/g) == null ? true : false;
+                }
+
+                function getControl( control, from, to) {
+                    var name = '#' + $(control).attr('id');
+                    if (from == to) return name;
+                    return (to == '') ? name.replace( '_' + from, to) : name.replace( from, to);
+                }
+               
+                function stopEvent(e) {
+                    e.stopImmediatePropagation();
+                    e.preventDefault();
+                }
+
+                function toggleLookup( control, from, e) {
+                    $(getControl( control, from, 'btn_menu')).toggleClass('active');
+                    $(getControl( control, from, 'menu')).toggle();
+                    stopEvent(e);
+                }
+
+                function addLookupItem( l, e) {
+                    var v = $(l + '_new_item').val();
+                    var b = false;
+
+                    $(l + '_select option').each(function() { 
+                        if ($(this).text() == v) { 
+                            b = true; 
+                            return false; 
+                        } 
+                    });
+
+                    if (!b)
+                    {
+                        $.ajax({
+                            async: false,
+                            type: 'POST',
+                            url: '/api/userlookup/' + $(l + '_type').val() + '/add/',
+                            dataType: 'json',
+                            data: { value : v}
+                        })
+                        .done(function(d){ $(l + '_select').append($('<option></option>').attr( 'value', d.id).attr('selected','selected').text(v)); })
+                        .fail(function(d){ alert('Operation failed. Please try again.'); });
+
+                        onChangeLookup(l);
+                    }
+
+                    $(l + '_btn_add').attr('disabled', true);
+                    $(l + '_new_item').val('');
+
+                    if (!$(l + '_select').attr('multiple')) 
+                    {
+                        $(l + '_btn_menu').toggleClass('active');
+                        $(l + '_menu').toggle();
+                    }
+                }
+
+                function onChangeLookup( l, d) {
+                    var o = $(l + '_select option');
+                    var ss = !$(l + '_select').attr('multiple');
+                    var v = new Array();
+                    var si = 0;
+
+                    $.map($(l).val().split(delimiter), function(i) {
+                        i = $.trim(i);
+                        if (i != '' && i != d) v.push(i);
+                    });
+
+                    $(o).each(function(){
+                        var i = $(this).text();
+                        var s = $(this).attr('selected') == 'selected' ? true : false;
+                        var p = $.inArray( i, v);
+                        
+                        if (p == -1 && s)
+                        {
+                            if (ss)
+                            {
+                                v = new Array(i);
+                                si = 1;
+                                return false;
+                            }
+                            else
+                                v.push(i);
+                        }
+                        else if (p > -1 && !s)
+                        {
+                            v.splice( p, 1);
+                        }
+
+                        si = s ? si + 1 : si;
+                    });
+
+                    $(l).val(v.sort().join(delimiter + ' '));
+                    $(l + '_btn_remove').attr('disabled', si == 1 ? false : true);
+                };
+               
+                $(".lookup .dropdown-toggle").click(function(e) {
+                    toggleLookup( this, 'btn_menu', e);
+                });
+                
+                $(".lookup button[id$='btn_ok']").click(function(e) {
+                    toggleLookup( this, 'btn_ok', e);
+                });
+               
+                $(".lookup input").keydown(function(e) {
+                    var c = '#' + $(this).attr('id');
+                    if ( e.which == 188 && (c.match(/new_item$/) || !$(c + '_select').attr('multiple') || !validLookup( $(c), e))) stopEvent(e);
+                });
+               
+                $(".lookup input[id$='new_item']").keyup(function() {
+                    $(getControl( this, 'new_item', 'btn_add')).attr( "disabled", ($(this).val().length > 0) ? false : true);
+                });
+
+                $(".lookup input").not("[id$='new_item']").focusout(function() {
+                    var l = '#' + $(this).attr('id');
+                    var o = $(l + '_select option');
+                    var v = $.map($(l).val().split(delimiter), $.trim);
+
+                    $(o).each(function(){
+                        if ($.inArray( $(this).text(), v) > -1) 
+                            $(this).attr( 'selected', 'selected');
+                        else
+                            $(this).removeAttr('selected');
+                    });
+                });
+
+                $(".lookup select").change(function(){
+                    onChangeLookup(getControl( this, 'select', ''));
+                });
+
+                $(".lookup input[id$='new_item']").keypress(function(e){
+                    if(e.which == 13) addLookupItem(getControl( this, 'new_item', ''), e);
+                });
+
+                $(".lookup button[id$='btn_add']").click(function(e){
+                    addLookupItem(getControl( this, 'btn_add', ''), e); 
+                });
+
+                $(".lookup button[id$='btn_remove']").click(function(){
+                    var l = getControl( this, 'btn_remove', '');
+                    var di = $(l + '_select option:selected');
+                    var dt = $(di).text();
+
+                    $.ajax({
+                        async: false,
+                        type: 'POST',
+                        url: '/api/userlookup/' + $(l + '_type').val() + '/delete/',
+                        dataType: 'json',
+                        data: { id : $(di).val() }
+                    })
+                    .done(function(d){ $(di).remove(); })
+                    .fail(function(d){ alert('Operation failed. Please try again.'); });
+
+                    $(l + '_btn_remove').attr("disabled", true);
+
+                    onChangeLookup(l,dt);
+                });
+
+            });
+
+            $(document).mouseup(function (e) {
+
+                $(".lookup").each(function() {
+                    if ($(this).has(e.target).length === 0 && $(this).find('.active').length > 0)
+                    {
+                        $(this).find('.active').click();
+                    }
+                });
+
+            });
+
+            /* placeholder fileds IE */
+
+            (function($) {
+                $.fn.placeholder = function() {
+                    if(typeof document.createElement("input").placeholder == 'undefined') {
+                        $('[placeholder]').focus(function() {
+                            var input = $(this);
+                            if (input.val() == input.attr('placeholder')) {
+                                input.val('');
+                                input.removeClass('placeholder');
+                            }
+                        }).blur(function() {
+                            var input = $(this);
+                            if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                                input.addClass('placeholder');
+                                input.val(input.attr('placeholder'));
+                            }
+                        }).blur().parents('form').submit(function() {
+                            $(this).find('[placeholder]').each(function() {
+                                var input = $(this);
+                                if (input.val() == input.attr('placeholder')) {
+                                    input.val('');
+                                }
+                            })
+                        });
+                    }
+                }
+            })(jQuery);
+            
+            $.fn.placeholder();
+       
+        </script>
+
+    </body>
+</html>
